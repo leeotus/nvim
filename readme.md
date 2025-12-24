@@ -12,15 +12,24 @@
 
 5. clone this repository
 
-After all the above operations, your neovim configuration folder should be like (you may need to adjust your folder):
+After all the above operations done, your neovim configuration folder should be like (you may need to adjust your folder):
 
 nvim\   <- neovim's configuration folder
+
     init.lua
+
     lua\
+
         plugin-configs\
+
             keyboard-mappings.lua
+
             options.lua
+
             plugins.lua
+
     readme.md <- you are reading this file
     
 > NOTE: Reference for some NeoVim configurations are from [davemackintosh/nvim](https://github.com/davemackintosh/nvim)
+
+### Key mapping
