@@ -7,15 +7,23 @@
 
 - "vscode-neovim.neovimExecutablePaths.win32": "path_to_your_neovim/bin",
 
-4. cd to the neovim's configuration folder, "C:\\your_name\\AppData\\Local\\nvim" in the Window system or "~/.config/nvim" in the Linux system.
+- or  "vscode-neovim.neovimExecutablePaths.linux": "path_to_nvim" in the Linux
+
+  > if you are using WSL, don't forget add: "vscode-neovim.useWSL": true
+
+4. cd to the neovim's configuration folder, "C:\\your_name\\AppData\\Local\\" in the Window system or "~/.config/" in the Linux system. 
 > sorry i'm not a mac user, but i think it's similar to Linux :)
 
 5. clone this repository
 
+```shell
+git clone https://github.com/leeotus/nvim.git
+```
+
 After all the above operations done, your neovim configuration folder should be like (you may need to adjust your folder):
 
 ```markdown
-nvim/  # Neovim's configuration folder
+Local/nvim/  # Neovim's configuration folder
 ├── init.lua
 ├── lua/
 │   └── plugin-configs/
@@ -25,7 +33,7 @@ nvim/  # Neovim's configuration folder
 └── readme.md  # you are reading this file
 ```
 
-### Key mapping
+### Key Mapping
 
 
 
