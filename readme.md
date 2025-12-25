@@ -9,9 +9,9 @@
 
 - or  "vscode-neovim.neovimExecutablePaths.linux": "path_to_nvim" in the Linux
 
-  > if you are using WSL, don't forget add: "vscode-neovim.useWSL": true
+  > if you are using WSL, don't forget to add: "vscode-neovim.useWSL": true
 
-4. cd to the neovim's configuration folder, "C:\\your_name\\AppData\\Local\\" in the Window system or "~/.config/" in the Linux system. 
+4. cd to the neovim's configuration folder, "C:\\your_name\\AppData\\Local\\" in the Window system or "~/.config/" in the Linux system.
 > sorry i'm not a mac user, but i think it's similar to Linux :)
 
 5. clone this repository
