@@ -1,13 +1,17 @@
 -- plugins
 
 local plugins = {
-	-- "easymotion/vim-easymotion",
 	-- {
-	-- "hadronized/hop.nvim",
-	-- config = function()
-	-- require "plugin-configs.hop"
-	-- end
+	--	"easymotion/vim-easymotion",
+	--	cond = not vim.g.vscode,
 	-- },
+	{
+		'smoka7/hop.nvim',
+		version = "*",
+		opts = {
+			keys = 'etovxqpdygfblzhckisuran'
+		}
+	},
 	-- icons
 	{
 		"nvim-tree/nvim-web-devicons",
@@ -308,6 +312,22 @@ local plugins = {
 		config = function()
 			require "plugin-configs.window-picker"
 		end
+	},
+	{
+		'romgrk/barbar.nvim',
+		cond = not vim.g.vscode,
+		dependencies = {
+			'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+			'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+		},
+		init = function() vim.g.barbar_auto_setup = false end,
+		opts = {
+			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+			-- animation = true,
+			-- insert_at_start = true,
+			-- …etc.
+		},
+		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
 
 
