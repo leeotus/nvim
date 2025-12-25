@@ -15,8 +15,6 @@ vim.keymap.set('n', 'K', '5k')
 -- vim.keymap.set('n', '<space>q', ':q<Enter>')
 -- vim.keymap.set('n', '<space>w', ':w<Enter>')
 vim.keymap.set('n', '<C-s>', ':w<Enter>')
-vim.keymap.set('n', "<leader>w", ":w<CR>")
-vim.keymap.set('n', "<leader>q", ":q<CR>")
 
 -- tabs
 vim.keymap.set('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
@@ -41,15 +39,49 @@ local hop = require('hop')
 local directions = require('hop.hint').HintDirection
 vim.keymap.set('', '<leader><leader>f', function()
   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-end, {remap=true})
+end, { remap = true })
 vim.keymap.set('', '<leader><leader>F', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-end, {remap=true})
+end, { remap = true })
 vim.keymap.set('', '<leader><leader>t', function()
   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })
-end, {remap=true})
+end, { remap = true })
 vim.keymap.set('', '<leader><leader>T', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
-end, {remap=true})
+end, { remap = true })
 
 vim.keymap.set('n', '<leader><leader>w', '<Cmd>HopWord<CR>')
+
+-- telescope
+local tsp = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', tsp.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', tsp.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', tsp.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', tsp.help_tags, { desc = 'Telescope help tags' })
+
+-- vscode
+if vim.g.vscode then
+  vim.keymap.set('n', '?',
+    '<Cmd>lua require("vscode").action(\'workbench.action.findInFiles\', { args = { query = vim.fn.expand(\'<cword>\') } })<CR>')
+
+  -- close
+  vim.keymap.set('n', '<space>q', '<Cmd>lua require("vscode").action(\'workbench.action.closeActiveEditor\')<CR>')
+
+  -- save
+  vim.keymap.set('n', '<space>w', '<Cmd>lua require("vscode").action(\'workbench.action.files.save\')<CR>')
+
+  -- show commands, replace ctrl+shift+p
+  vim.keymap.set('n', '<space>p', '<Cmd>lua require("vscode").action(\'workbench.action.showCommands\')<CR>');
+
+  -- show symbols, replace ctrl+shift+o
+  vim.keymap.set('n', '<space>o', '<Cmd>lua require("vscode").action(\'workbench.action.gotoSymbol\')<CR>')
+
+  -- move tabs, need extension: Leaper(Onlylys)
+  vim.keymap.set('n', '<space>]', '<Cmd>lua require("vscode").action(\'workbench.action.moveEditorRightInGroup\')<CR>')
+  vim.keymap.set('n', '<space>[', '<Cmd>lua require("vscode").action(\'workbench.action.moveEditorLeftInGroup\')<CR>')
+else
+  -- normal neovim
+
+  vim.keymap.set('n', "<leader>w", ":w<CR>")
+  vim.keymap.set('n', "q", "<Cmd>BufferClose<CR>")
+end
