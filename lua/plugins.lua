@@ -3,11 +3,16 @@
 local plugins = {
 	-- "easymotion/vim-easymotion",
 	-- {
-		-- "hadronized/hop.nvim",
-		-- config = function()
-			-- require "plugin-configs.hop"
-		-- end
+	-- "hadronized/hop.nvim",
+	-- config = function()
+	-- require "plugin-configs.hop"
+	-- end
 	-- },
+	-- icons
+	{
+		"nvim-tree/nvim-web-devicons",
+		opts = {}
+	},
 	{
 		"ggandor/lightspeed.nvim",
 		config = function()
@@ -16,21 +21,21 @@ local plugins = {
 	},
 	-- "ggandor/lightspeed.nvim",
 	-- {
-		-- 'smoka7/hop.nvim',
-		-- version = '*',
-		-- opts = {
-			-- keys = 'etovxqpdygfblzhckisuran'
-		-- },
-		-- config = function() 
-			-- require "plugin-configs.hop"
-		-- end,
+	-- 'smoka7/hop.nvim',
+	-- version = '*',
+	-- opts = {
+	-- keys = 'etovxqpdygfblzhckisuran'
+	-- },
+	-- config = function()
+	-- require "plugin-configs.hop"
+	-- end,
 	-- },
 	-- "Lokaltog/vim-powerline",		-- no need for vscode
 	-- "preservim/nerdtree",			-- vscode has similar extension
 	"jiangmiao/auto-pairs",
-	{"neoclide/coc.nvim", branch='release'},
-	{'akinsho/toggleterm.nvim', version = "*", config = true},
-	
+	{ "neoclide/coc.nvim",       branch = 'release' },
+	{ 'akinsho/toggleterm.nvim', version = "*",     config = true },
+
 	{
 		"williamboman/mason.nvim",
 		run = ":MasonUpdate", -- :MasonUpdate updates registry contents
@@ -64,7 +69,7 @@ local plugins = {
 			require('snippy').setup {}
 		end
 	},
-	
+
 	"editorconfig/editorconfig-vim",
 	{
 		"hrsh7th/nvim-cmp",
@@ -258,6 +263,54 @@ local plugins = {
 		end,
 	},
 	"theHamsta/nvim-dap-virtual-text", -- Add virtual text of values in code.
+	{
+		"wurli/visimatch.nvim",
+		opts = require "plugin-configs.visimatch"
+
+	},
+
+	-- doesn't work in vscode
+	{
+		"sphamba/smear-cursor.nvim",
+		opts = require "plugin-configs.smear"
+	},
+
+	-- https://github.com/nvim-neo-tree/neo-tree.nvim
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		cond = not vim.g.vscode,
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+			"nvim-tree/nvim-web-devicons", -- optional, but recommended
+		},
+		lazy = false,             -- neo-tree will lazily load itself
+		config = function()
+			require "plugin-configs.neotree"
+		end
+	},
+	{
+		"antosha417/nvim-lsp-file-operations",
+		cond = not vim.g.vscode,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-neo-tree/neo-tree.nvim", -- makes sure that this loads after Neo-tree.
+		},
+		config = function()
+			require "plugin-configs.file-operations"
+		end
+	},
+	{
+		"s1n7ax/nvim-window-picker",
+		cond = not vim.g.vscode,
+		version = "2.*",
+		config = function()
+			require "plugin-configs.window-picker"
+		end
+	},
+
+
 }
 
 return plugins
