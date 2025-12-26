@@ -48,3 +48,17 @@ o.wildignore = [[
 -- leader key
 map("n", ",", "", {})
 vim.g.mapleader = "\\"
+
+-- highlight on copy
+local highlight_yank = vim.api.nvim_create_augroup("highlight_yank", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = highlight_yank,
+	desc = "highlight on copy",
+	callback = function()
+		vim.highlight.on_yank({ timeout = 300 })
+	end
+})
+
+if vim.g.vscode then
+	vim.notify = require('vscode').notify
+end
