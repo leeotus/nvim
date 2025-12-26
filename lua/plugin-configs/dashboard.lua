@@ -27,13 +27,13 @@ function M.setup()
 			"  Recently used files",
 			":Telescope oldfiles <CR>"
 		),
-		dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+		dashboard.button("q", "🙌  Quit Neovim", ":qa<CR>"),
 	}
 
 	local function footer()
 		-- Number of plugins
 		local datetime = os.date "%d-%m-%Y %H:%M:%S"
-		local plugins_text = "   "
+		local plugins_text = "  🎨 "
 			.. stats.count
 			.. " plugins"
 			.. "   v"

@@ -3,9 +3,9 @@
 ### Setup
 1. download & install vscode and [NeoVim](www.baidu.com)
 2. install "VSCode Neovim" extension in the vscode
-3. config `settings.json`, add: 
+3. config `settings.json`, add:
 
-- "vscode-neovim.neovimExecutablePaths.win32": "path_to_your_neovim/bin",
+- "vscode-neovim.neovimExecutablePaths.win32": "path_to_your_neovim/bin/nvim.exe",
 
 - or  "vscode-neovim.neovimExecutablePaths.linux": "path_to_nvim" in the Linux
 
@@ -23,7 +23,7 @@ git clone https://github.com/leeotus/nvim.git
 After all the above operations done, your neovim configuration folder should be like (you may need to adjust your folder):
 
 ```markdown
-Local/nvim/  # Neovim's configuration folder
+Local/nvim/  # or ~/.config/nvim
 ├── init.lua
 ├── lua/
 │   └── plugin-configs/
@@ -31,9 +31,19 @@ Local/nvim/  # Neovim's configuration folder
 │       ├── options.lua
 │       └── plugins.lua
 └── readme.md  # you are reading this file
+...other files
 ```
 
 ### Key Mapping
+
+First of all, the "<leader>" key is defined in options.lua.
+
+```lua
+-- options.lua
+vim.g.mapleader = "\\"
+```
+
+just change it as you like.
 
 
 
