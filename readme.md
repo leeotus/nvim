@@ -1,9 +1,10 @@
 ## My VsCode+NeoVim Configurations
 
 ### Setup
-1. download & install vscode and [NeoVim](www.baidu.com)
-2. install "VSCode Neovim" extension in the vscode
-3. config `settings.json`, add:
+download & install [Visual Studio Code](https://code.visualstudio.com/) and [NeoVim](https://github.com/neovim/neovim/releases)
+
+1. install "VSCode Neovim" extension in the vscode
+2. config `settings.json`, add:
 
 - "vscode-neovim.neovimExecutablePaths.win32": "path_to_your_neovim/bin/nvim.exe",
 
@@ -51,15 +52,17 @@ just change it as you like.
 
 I usually use "\<leader\>"-series shortcuts to quickly search (or jump to) something (or somewhere) in the current editor, and "\<space\>" to save/quit or move tabs... instead. I have been used to these operations, here lists my key mappings:
 
-| key      | binding     | operation   |
-| -------- | ----------- | ----------- |
-| J        | 5j          | move faster |
-| K        | 5k          | move faster |
-| Ctrl + s | :w\<Enter\> | save file   |
-|          |             |             |
-|          |             |             |
+| key      | binding                                  | operation                 |
+| -------- | ---------------------------------------- | ------------------------- |
+| J        | 5j                                       | move downward faster      |
+| K        | 5k                                       | move upward faster        |
+| Ctrl + s | :w\<Enter\>                              | save file                 |
+|          |                                          |                           |
+|          |                                          |                           |
+| ?        | vscode^[1]^.workbench.action.findInFiles | search with selected word |
+|          |                                          |                           |
 
-
+[1] the binding begins with 'vscode.' means that this keybinding is derived from one of the vscode's embedded functions. You can open your vscode's "Keyboard Shortcuts" to see these functions
 
 ### Reference
 
