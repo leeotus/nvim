@@ -36,6 +36,10 @@ Local/nvim/  # or ~/.config/nvim
 
 ### Key Mapping
 
+> see keyboard-mappings.lua
+>
+> NOTE: some key mappings may depend on specific extensions in the vscode
+
 First of all, the "<leader>" key is defined in options.lua.
 
 ```lua
@@ -45,8 +49,18 @@ vim.g.mapleader = "\\"
 
 just change it as you like.
 
+I usually use "\<leader\>"-series shortcuts to quickly search (or jump to) something (or somewhere) in the current editor, and "\<space\>" to save/quit or move tabs... instead. I have been used to these operations, here lists my key mappings:
+
+| key      | binding     | operation   |
+| -------- | ----------- | ----------- |
+| J        | 5j          | move faster |
+| K        | 5k          | move faster |
+| Ctrl + s | :w\<Enter\> | save file   |
+|          |             |             |
+|          |             |             |
 
 
 
+### Reference
 
-> NOTE: Reference for some NeoVim configurations are from [davemackintosh/nvim](https://github.com/davemackintosh/nvim)
+> Reference for some NeoVim configurations are from [davemackintosh/nvim](https://github.com/davemackintosh/nvim)
