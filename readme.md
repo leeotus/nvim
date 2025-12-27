@@ -52,18 +52,26 @@ just change it as you like.
 
 I usually use "\<leader\>"-series shortcuts to quickly search (or jump to) something (or somewhere) in the current editor, and "\<space\>" to save/quit or move tabs... instead. I have been used to these operations, here lists my key mappings:
 
-| key      | binding                                  | operation                 |
-| -------- | ---------------------------------------- | ------------------------- |
-| J        | 5j                                       | move downward faster      |
-| K        | 5k                                       | move upward faster        |
-| Ctrl + s | :w\<Enter\>                              | save file                 |
-|          |                                          |                           |
-|          |                                          |                           |
-| ?        | vscode^[1]^.workbench.action.findInFiles | search with selected word |
-|          |                                          |                           |
+| key                   | binding                                        | operation                                         |
+| --------------------- | ---------------------------------------------- | ------------------------------------------------- |
+| J                     | 5j                                             | move downward faster                              |
+| K                     | 5k                                             | move upward faster                                |
+| Ctrl + s              | :w\<Enter\>                                    | save file                                         |
+| \<space\>q            | vscode.workbench.action.closeActiveEditor      | close current file                                |
+| \<space\>w            | vscode.workbench.action.files.save             | save current file                                 |
+| ?                     | vscode.workbench.action.findInFiles            | search with selected word                         |
+| \<space\>p            | vscode.workbench.action.showCommands           | open commands (replaces ctrl + shift + p)         |
+| \<space\>o            | vscode.workbench.action.gotoSymbol             | show symbol panel (replaces ctrl + shift + o)     |
+| \<space\>]            | vscode.workbench.action.moveEditorRightInGroup | extension Leaper(@Onlylys), move tab to the right |
+| \<space\>[            | vscode.workbench.action.moveEditorLeftInGroup  | move tab to the left                              |
+| \<space\>=            | vscode.workbench.action.nextEditor             | goto the next tab (replaces :gt)                  |
+| \<space\>-            | vscode.workben.action.previousEditor           | goto the previous tab (replaces :gT)              |
+| \<leader\>\<leader\>w | HopWord                                        | neovim'extension, quickly jump to the word        |
 
-[1] the binding begins with 'vscode.' means that this keybinding is derived from one of the vscode's embedded functions. You can open your vscode's "Keyboard Shortcuts" to see these functions
+the binding begins with 'vscode.' means that the corresponding keybinding is derived from one of the vscode's embedded functions. You can open your vscode's "Keyboard Shortcuts" to see them.
 
 ### Reference
 
-> Reference for some NeoVim configurations are from [davemackintosh/nvim](https://github.com/davemackintosh/nvim)
+>  [davemackintosh/nvim](https://github.com/davemackintosh/nvim)
+>
+> [rockerBOO/awesome-neovim](https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#tabline)

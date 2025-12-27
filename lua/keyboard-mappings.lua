@@ -20,6 +20,10 @@ if vim.g.vscode then
   vim.keymap.set('n', '?',
     '<Cmd>lua require("vscode").action(\'workbench.action.findInFiles\', { args = { query = vim.fn.expand(\'<cword>\') } })<CR>')
 
+  -- NerdTree(@Llam4u)
+  vim.keymap.set('n', '<C-m>',
+    '<Cmd>lua require("vscode").action(\'nerdtree.unfocusSidebarOrClose\')<CR>')
+
   -- close
   vim.keymap.set('n', '<space>q', '<Cmd>lua require("vscode").action(\'workbench.action.closeActiveEditor\')<CR>')
 
@@ -32,13 +36,13 @@ if vim.g.vscode then
   -- show symbols, replace ctrl+shift+o
   vim.keymap.set('n', '<space>o', '<Cmd>lua require("vscode").action(\'workbench.action.gotoSymbol\')<CR>')
 
-  -- move tabs, need extension: Leaper(Onlylys)
+  -- move tabs, need extension: Leaper(@Onlylys)
   vim.keymap.set('n', '<space>]', '<Cmd>lua require("vscode").action(\'workbench.action.moveEditorRightInGroup\')<CR>')
   vim.keymap.set('n', '<space>[', '<Cmd>lua require("vscode").action(\'workbench.action.moveEditorLeftInGroup\')<CR>')
 
   -- replace gt and gT
-  vim.keymap.set('n', '<space>.', '<Cmd>lua require("vscode").action(\'workbench.action.nextEditor\')<CR>')
-  vim.keymap.set('n', '<space>,', '<Cmd>lua require("vscode").action(\'workbench.action.previousEditor\')<CR>')
+  vim.keymap.set('n', '<space>=', '<Cmd>lua require("vscode").action(\'workbench.action.nextEditor\')<CR>')
+  vim.keymap.set('n', '<space>-', '<Cmd>lua require("vscode").action(\'workbench.action.previousEditor\')<CR>')
 else
   -- normal neovim
   local opts = { noremap = true, silent = true }
