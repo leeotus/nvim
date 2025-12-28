@@ -6,23 +6,20 @@ local mapx = require("mapx").setup()
 -- binding keys
 vim.keymap.set('n', 'J', '5j')
 vim.keymap.set('n', 'K', '5k')
+
 -- vim.keymap.set('n', '<space>q', ':q<Enter>')
 -- vim.keymap.set('n', '<space>w', ':w<Enter>')
 vim.keymap.set('n', '<C-s>', ':w<Enter>')
 
 -- hop keymapping
 vim.keymap.set('n', '<leader><leader>w', '<Cmd>HopWord<CR>')
-vim.keymap.set('n', '<leader><leader>f', '<Cmd>HopPattern<CR>')
-
+vim.keymap.set('n', '<leader><leader>1', '<Cmd>HopChar1<CR>')
+vim.keymap.set('n', '<leader><leader>2', '<Cmd>HopChar2<CR>')
 
 -- vscode
 if vim.g.vscode then
   vim.keymap.set('n', '?',
     '<Cmd>lua require("vscode").action(\'workbench.action.findInFiles\', { args = { query = vim.fn.expand(\'<cword>\') } })<CR>')
-
-  -- NerdTree(@Llam4u)
-  vim.keymap.set('n', '<C-m>',
-    '<Cmd>lua require("vscode").action(\'nerdtree.unfocusSidebarOrClose\')<CR>')
 
   -- close
   vim.keymap.set('n', '<space>q', '<Cmd>lua require("vscode").action(\'workbench.action.closeActiveEditor\')<CR>')
@@ -35,6 +32,9 @@ if vim.g.vscode then
 
   -- show symbols, replace ctrl+shift+o
   vim.keymap.set('n', '<space>o', '<Cmd>lua require("vscode").action(\'workbench.action.gotoSymbol\')<CR>')
+
+  -- rename variable
+  vim.keymap.set('n', '<space>r', '<Cmd>lua require("vscode").action(\'editor.action.rename\')<CR>')
 
   -- move tabs, need extension: Leaper(@Onlylys)
   vim.keymap.set('n', '<space>]', '<Cmd>lua require("vscode").action(\'workbench.action.moveEditorRightInGroup\')<CR>')
