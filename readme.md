@@ -2,6 +2,10 @@
 
 This is a beginner-friendly configuration tutorial for VsCode and NeoVim. At the same time, it's also available for all those who want to use NeoVim in VsCode as a reference.
 
+![image-20251228174519435](./assets/image-20251228174519435.png)
+
+![image-20251228174415654](./assets/image-20251228174415654.png)
+
 ### Setup
 download & install [Visual Studio Code](https://code.visualstudio.com/) and [NeoVim](https://github.com/neovim/neovim/releases)
 
@@ -119,6 +123,9 @@ First of all, i usually  use \<tab\> to accept code suggestion when typing, duri
 16. Comment Highlighter (@willasm)
 17. Comment headers (@akmar nafi)
 18. Indent one space (@Alexander)
+19. background-cover (@满猪小星小猪满)
+
+> these extensions work very fine with vscode-neovim.
 
 ### Reference
 
