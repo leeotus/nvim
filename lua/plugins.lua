@@ -1,10 +1,6 @@
 -- plugins
 
 local plugins = {
-	-- {
-	--	"easymotion/vim-easymotion",
-	--	cond = not vim.g.vscode,
-	-- },
 	{
 		'smoka7/hop.nvim',
 		version = "*",
@@ -329,17 +325,17 @@ local plugins = {
 		},
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
-  {
+	{
 		'ya2s/nvim-cursorline',
 		config = function()
-				require "plugin-configs.cursorline"
+			require "plugin-configs.cursorline"
 		end
-  },
-  {
-    'nvim-telescope/telescope.nvim', 
+	},
+	{
+		'nvim-telescope/telescope.nvim',
 		tag = 'v0.2.0',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  }
+		dependencies = { 'nvim-lua/plenary.nvim' }
+	},
 }
 
 return plugins
