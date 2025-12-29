@@ -63,6 +63,7 @@ I usually use "\<leader\>"-series shortcuts to quickly search (or jump to) somet
 | J                     | 5j                                             | move downward faster                                      |
 | K                     | 5k                                             | move upward faster                                        |
 | Ctrl + s              | :w\<Enter\>                                    | save file                                                 |
+| za                    | vscode.editor.toggleFold                       | fold or unfold content                                    |
 | \<space\>q            | vscode.workbench.action.closeActiveEditor      | close current file                                        |
 | \<space\>w            | vscode.workbench.action.files.save             | save current file                                         |
 | ?                     | vscode.workbench.action.findInFiles            | search with selected word                                 |
@@ -78,6 +79,35 @@ I usually use "\<leader\>"-series shortcuts to quickly search (or jump to) somet
 | \<leader\>\<leader\>2 | HopChar2                                       | find 2 char                                               |
 
 the binding begins with 'vscode.' means that the corresponding keybinding is derived from one of the vscode's embedded functions. You can open your vscode's "Keyboard Shortcuts" to see them.
+
+Some already embedded key-mappings when neovim-extension installed:
+
+- viewpoint
+
+> these keys only work when your cursor focuses on the open editor
+
+| key       | operation                        |
+| --------- | -------------------------------- |
+| zb        | display the cursor line bottom   |
+| zz        | display the cursor line centered |
+| zt        | display the cursor line top      |
+| \<ctrl\>e | screen scrolls up one line       |
+| \<ctrl\>y | screen scrolls down one line     |
+| H         | jump to the top of the screen    |
+| M         | jump to the middle of the screen |
+| L         | jump to the bottom of the screen |
+
+- explorer
+
+| key  | operation             |
+| ---- | --------------------- |
+| a    | new file              |
+| d    | delete file           |
+| v    | open file to the side |
+| x    | cut file              |
+| p    | paste file            |
+
+
 
 ### Key Mappings (VsCode)
 

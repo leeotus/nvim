@@ -43,6 +43,9 @@ if vim.g.vscode then
   -- replace gt and gT
   vim.keymap.set('n', '<space>=', '<Cmd>lua require("vscode").action(\'workbench.action.nextEditor\')<CR>')
   vim.keymap.set('n', '<space>-', '<Cmd>lua require("vscode").action(\'workbench.action.previousEditor\')<CR>')
+
+  -- fold and unfold
+  vim.keymap.set('n', 'za', '<Cmd>lua require("vscode").action(\'editor.toggleFold\')<CR>')
 else
   -- normal neovim
   local opts = { noremap = true, silent = true }
