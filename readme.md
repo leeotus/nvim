@@ -2,7 +2,7 @@
 
 This is a beginner-friendly configuration tutorial for VsCode and NeoVim. At the same time, it's also available for all those who want to use NeoVim in VsCode as a reference.
 
-![image-20251228174519435](./assets/image-20251228174519435.png)
+![image-20251229102827855](./assets/image-20251229102827855.png)
 
 ![image-20251228174415654](./assets/image-20251228174415654.png)
 
