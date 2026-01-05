@@ -82,6 +82,15 @@ the binding begins with 'vscode.' means that the corresponding keybinding is der
 
 Some already embedded key-mappings when neovim-extension installed:
 
+- select
+
+| key       | operation       |
+| --------- | --------------- |
+| \<ctrl\>n | select next     |
+| \<ctrl\>p | select previous |
+
+These two key-bindings can be used in many situations, when selecting suggestions, selecting files, selecting commands...
+
 - viewpoint
 
 > these keys only work when your cursor focuses on the open editor
@@ -131,7 +140,7 @@ First of all, i usually  use \<tab\> to accept code suggestion when typing, duri
 }
 ```
 
-
+Note: As mentioned above, if you wanna select a next/previous suggestion, use \<ctrl\>+n and \<ctrl\>+p instead.
 
 #### Highly-recommended Extensions (VsCode)
 
@@ -148,12 +157,14 @@ First of all, i usually  use \<tab\> to accept code suggestion when typing, duri
 11. Trailing Spaces (@Shardul Mahadik)
 12. Monitor Pro (@Nexmoe)
 13. Git Graph (@mhutchie)
-14. Error Gutters (@IgorSbitnev)
-15. Doxygen Documentation Generator (@Christoph Schlosser)
-16. Comment Highlighter (@willasm)
-17. Comment headers (@akmar nafi)
-18. Indent one space (@Alexander)
-19. background-cover (@满猪小星小猪满)
+14. GitLess (@maattdd)
+15. Error Gutters (@IgorSbitnev)
+16. Doxygen Documentation Generator (@Christoph Schlosser)
+17. Comment Highlighter (@willasm)
+18. Comment headers (@akmar nafi)
+19. Indent one space (@Alexander)
+20. background-cover (@满猪小星小猪满)
+21. VsCode Animations (@Brandon Kirbyson) + Custom CSS and JS Loader (@be5invis)
 
 > these extensions work very fine with vscode-neovim.
 
