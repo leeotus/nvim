@@ -336,6 +336,28 @@ local plugins = {
 		tag = 'v0.2.0',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
+	{
+		'mawkler/hml.nvim',
+		opts = {}
+	},
+	{
+		"cbochs/portal.nvim",
+		-- Optional dependencies
+		dependencies = {
+			"cbochs/grapple.nvim",
+			"ThePrimeagen/harpoon"
+		},
+	},
+	{
+		"chrisgrieser/nvim-spider",
+		lazy = true,
+		config = function()
+			require "plugin-configs.spider"
+		end
+	},
+	{
+		"woosaaahh/sj.nvim",
+	}
 }
 
 return plugins

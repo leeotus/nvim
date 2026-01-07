@@ -16,6 +16,11 @@ vim.keymap.set('n', '<leader><leader>w', '<Cmd>HopWord<CR>')
 vim.keymap.set('n', '<leader><leader>1', '<Cmd>HopChar1<CR>')
 vim.keymap.set('n', '<leader><leader>2', '<Cmd>HopChar2<CR>')
 
+-- spider
+vim.keymap.set('n', 'w', "<Cmd>lua require('spider').motion('w')<CR>")
+vim.keymap.set('n', 'e', "<Cmd>lua require('spider').motion('e')<CR>")
+vim.keymap.set('n', 'b', "<Cmd>lua require('spider').motion('b')<CR>")
+
 -- vscode
 if vim.g.vscode then
   vim.keymap.set('n', '?',
@@ -81,4 +86,8 @@ else
 
   -- Neotree
   vim.keymap.set("n", "<leader>e", "<Cmd>Neotree filesystem reveal right<CR>")
+
+  -- portal nvim
+  vim.keymap.set("n", "<space>o", "<cmd>Portal jumplist backward<cr>")
+  vim.keymap.set("n", "<space>i", "<cmd>Portal jumplist forward<cr>")
 end
