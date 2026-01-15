@@ -82,7 +82,7 @@ the binding begins with 'vscode.' means that the corresponding keybinding is der
 
 Some already embedded key-mappings when neovim-extension installed:
 
-- select
+- Selection
 
 | key       | operation       |
 | --------- | --------------- |
@@ -91,7 +91,7 @@ Some already embedded key-mappings when neovim-extension installed:
 
 These two key-bindings can be used in many situations, when selecting suggestions, selecting files, selecting commands...
 
-- viewpoint
+- Viewpoint
 
 > these keys only work when your cursor focuses on the open editor
 
@@ -106,7 +106,7 @@ These two key-bindings can be used in many situations, when selecting suggestion
 | M         | jump to the middle of the screen |
 | L         | jump to the bottom of the screen |
 
-- explorer
+- Explorer
 
 | key  | operation             |
 | ---- | --------------------- |
@@ -135,7 +135,7 @@ First of all, i usually  use \<tab\> to accept code suggestion when typing, duri
 	{
         "key": "shift+tab",
         "command": "hideSuggestWidget",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+        "when": "editorTextFocus && suggestWidgetVisible"
     },
 }
 ```
@@ -146,7 +146,7 @@ Note: As mentioned above, if you wanna select a next/previous suggestion, use \<
 
 1. TabOut (@Albert Romkes)
 2. Colonize (@vmsynkov)
-3. Bracket (@wraith13)
+3. Bracket Lens (@wraith13)
 4. Highlight Line (@Clifford Fajardo)
 5. indent-rainbow (@oderwat)
 6. Indenticator (@SirTori)

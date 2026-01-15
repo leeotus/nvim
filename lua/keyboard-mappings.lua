@@ -1,18 +1,16 @@
 local mapx = require("mapx").setup()
 
--- mapx
--- @ref: https://github.com/b0o/mapx.nvim
-
 -- binding keys
-vim.keymap.set('n', 'J', '5j')
-vim.keymap.set('n', 'K', '5k')
+vim.keymap.set({"n", "o", "x"}, 'J', '5j')
+vim.keymap.set({"n", "o", "x"}, 'K', '5k')
 
 -- vim.keymap.set('n', '<space>q', ':q<Enter>')
 -- vim.keymap.set('n', '<space>w', ':w<Enter>')
-vim.keymap.set('n', '<C-s>', ':w<Enter>')
 
 -- hop keymapping
 vim.keymap.set('n', '<leader><leader>w', '<Cmd>HopWord<CR>')
+vim.keymap.set('n', '<leader><leader>f', '<Cmd>HopPatternAC<CR>')
+vim.keymap.set('n', '<leader><leader>F', '<Cmd>HopPatternBC<CR>')
 vim.keymap.set('n', '<leader><leader>1', '<Cmd>HopChar1<CR>')
 vim.keymap.set('n', '<leader><leader>2', '<Cmd>HopChar2<CR>')
 
@@ -23,6 +21,8 @@ vim.keymap.set('n', 'b', "<Cmd>lua require('spider').motion('b')<CR>")
 
 -- vscode
 if vim.g.vscode then
+  vim.keymap.set({"n", "o", "x"}, '<C-s>', '<Cmd>lua require("vscode").action(\'workbench.action.files.save\')<CR>')
+
   vim.keymap.set('n', '?',
     '<Cmd>lua require("vscode").action(\'workbench.action.findInFiles\', { args = { query = vim.fn.expand(\'<cword>\') } })<CR>')
 
@@ -48,6 +48,9 @@ if vim.g.vscode then
   -- replace gt and gT
   vim.keymap.set('n', '<space>=', '<Cmd>lua require("vscode").action(\'workbench.action.nextEditor\')<CR>')
   vim.keymap.set('n', '<space>-', '<Cmd>lua require("vscode").action(\'workbench.action.previousEditor\')<CR>')
+  
+  -- replace ctrl+f to find symbols in the current open editor
+  vim.keymap.set('n', '<leader>f', '<Cmd>lua require("vscode").action(\'actions.find\')<CR>')
 
   -- fold and unfold
   vim.keymap.set('n', 'za', '<Cmd>lua require("vscode").action(\'editor.toggleFold\')<CR>')
